@@ -1,11 +1,39 @@
 /* style.css */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-image: url('https://images.unsplash.com/photo-1531297484001-80022131f5a1');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(0, 0, 0); /* Pour que le texte reste lisible */
     text-align: center;
+
+
 }
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+
+    
 
 header {
     background: #333;
@@ -29,22 +57,39 @@ nav ul li a {
 }
 
 main {
-    padding: 20px;
-    background: white;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 800px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+
+
+        background: rgba(255, 255, 255, 0.1); /* gris très clair transparent */
+        padding: 30px;
+        margin: 30px auto;
+        width: 90%;
+        max-width: 900px;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        backdrop-filter: blur(6px); /* floute légèrement le fond derrière */
+        -webkit-backdrop-filter: blur(6px); /* compatibilité Safari */
+        color: white; /* texte blanc lisible */
+        flex: 1;
+        
+    
+    
 }
 
 footer {
-    background: #333;
-    color: white;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+         background: rgba(255, 255, 255, 0.1);
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        position: relative;
+
+    
+    
+
 }
 
 form {
