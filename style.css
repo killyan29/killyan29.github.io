@@ -73,3 +73,40 @@ button {
 button:hover {
     background-color: #e68900;
 }
+
+
+.accueil-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.photo img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ff9800;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.cv-section {
+    text-align: center;
+}
+
+.btn-cv {
+    display: inline-block;
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-cv:hover {
+    background-color: #e68900;
+}
