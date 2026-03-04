@@ -3,48 +3,325 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - Portfolio</title>
+    <title>Portfolio | Étudiant BTS SIO SLAM</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Intégration de Font Awesome pour les icônes (via CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Intégration de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Mon Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="about.html">À propos</a></li>
-                <li><a href="projects.html">Projets</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="veille.html">Veille</a></li>
 
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Portfolio<span class="dot">.</span></a>
+            
+            <!-- Checkbox Hack pour le menu mobile (CSS only) -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+
+            <!-- Liens de navigation -->
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-item">Accueil</a></li>
+                <li><a href="#about" class="nav-item">À propos</a></li>
+                <li><a href="#skills" class="nav-item">Compétences</a></li>
+                <li><a href="#journey" class="nav-item">Parcours</a></li>
+                <li><a href="#projects" class="nav-item">Projets</a></li>
+                <li><a href="#veille" class="nav-item">Veille</a></li>
+                <li><a href="#contact" class="nav-item">Contact</a></li>
             </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Bienvenue sur mon Portfolio !</h1>
-      <p>Bonjour, bienvenue sur mon portfolio. Vous trouverez ici les études et projets que j'ai réalisés 
-        tout au long de mon BTS SIO.
-      </p>
-      <h2>Adresse :</h2>
-      <br> <p> Travail : Mairie de La Trinité, gestion du parc informatique et numérique,
-         intervention sur site en cas de problème technique sur PC ou réseau.</p> </br>
-         <div class="accueil-container">
-         <!-- Image de profil -->
-            <div class="photo">
-                <img src="https://imgur.com/mFFYDTe.jpg" alt="Photo de moi" class="photo-accueil">
+        </div>
+    </nav>
 
-            </div>
-
-            <!-- CV -->
-            <div class="cv-section">
-                <h3>Mon CV</h3>
-                <p>Vous pouvez consulter mon CV en cliquant ci-dessous :</p>
-                <a href="CV.pdf" download class="btn-cv">📄 Télécharger mon CV</a>
+    <!-- Section Hero -->
+    <header id="hero" class="hero-section">
+        <div class="container hero-content">
+            <p class="subtitle">Bonjour, je suis</p>
+            <h1>Laugier Killyan</h1>
+            <h2>Étudiant BTS SIO <span class="highlight">SLAM</span></h2>
+            <p class="description">
+                Passionné par le développement web et logiciel. Je conçois des solutions modernes et performantes.
+                En route pour devenir développeur Full Stack.
+            </p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                <a href="#contact" class="btn btn-secondary">Me contacter</a>
             </div>
         </div>
-    </main>
-    <footer>
-        <p>&copy; 2025 Mon Portfolio</p>
+        <div class="scroll-down">
+            <a href="#about">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Section À propos -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Actuellement en 2ème année de <strong>BTS SIO (Services Informatiques aux Organisations)</strong>, option <strong>SLAM (Solutions Logicielles et Applications Métiers)</strong>.
+                    </p>
+                    <p>
+                        J'ai découvert la programmation par curiosité et c'est devenu une véritable passion. J'aime résoudre des problèmes complexes et créer des interfaces utilisateur intuitives et esthétiques.
+                    </p>
+                    <p>
+                        <strong>Mon objectif </strong> est de poursuivre mes études en master spécialisé dans le développement web avancé et de créer mon entreprise d'assistance et de développement web.
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Années d'études</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projets réalisés</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Motivé</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">Mes Compétences</h2>
+            <div class="skills-grid">
+                <!-- Carte Compétence HTML/CSS -->
+                <div class="skill-card">
+                    <div class="icon-box">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML5 & CSS3</h3>
+                    <p>Structure sémantique, Flexbox, Grid, Animations, Responsive Design.</p>
+                </div>
+                <!-- Carte Compétence JS (Noté comme apprentissage même si pas utilisé ici pour le portfolio) -->
+                <div class="skill-card">
+                    <div class="icon-box">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>DOM manipulation, ES6+, Fetch API, Logique algorithmique.</p>
+                </div>
+                <!-- Carte Compétence PHP/SQL -->
+                <div class="skill-card">
+                    <div class="icon-box">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <h3>PHP & SQL</h3>
+                    <p>Développement backend, gestion de base de données MySQL, MVC.</p>
+                </div>
+                <!-- Carte Compétence Outils -->
+                <div class="skill-card">
+                    <div class="icon-box">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h3>Outils & Git</h3>
+                    <p>Versionning avec Git/GitHub, VS Code, Méthodes Agiles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Parcours -->
+    <section id="journey" class="section journey-section">
+        <div class="container">
+            <h2 class="section-title">Mon Parcours</h2>
+            <div class="timeline">
+                
+                <!-- Item Parcours 1 (Le plus récent - BTS SIO) -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="date">2022 - Présent</div>
+                        <h3>BTS SIO option SLAM</h3>
+                        <h4>Ilec Business School, Nice</h4>
+                        <p>Préparation du Brevet de Technicien Supérieur aux Services Informatiques aux Organisations. Option Solutions Logicielles et Applications Métiers.</p>
+                        <span class="badge">En cours</span>
+                    </div>
+                </div>
+
+                <!-- Item Parcours (Nouveau - 2025) -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="date">2025 - Aujourd'hui</div>
+                        <h3>Alternance en maintenance informatique</h3>
+                        <h4>Nice informatique, Nice</h4>
+                        <p>Maintenance et support technique d'objet informatique (ordinateur, imprimante, scanner, etc.).</p>
+                        <span class="badge">En poste</span>
+                    </div>
+                </div>
+
+                <!-- Item Parcours (Nouveau - 2024-2025) -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="date">2024 - 2025</div>
+                        <h3>Alternance technicien de support</h3>
+                        <h4>Mairie de la Trinité, Trinité</h4>
+                        <p>Assistance et dépannage au sein de la mairie pour les fonctionnaires.</p>
+                        <span class="badge">Alternance</span>
+                    </div>
+                </div>
+
+                <!-- Item Parcours 2 -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="date">octobre 2023 -  juillet 2024</div>
+                        <h3>Alternance en maintenance informatique</h3>
+                        <h4>Yokose, Nice</h4>
+                        <p>Maintenance et support technique d'objet informatique (ordinateur, imprimante, scanner, etc.).</p>
+                        <span class="badge">Alternance</span>
+                    </div>
+                </div>
+
+                <!-- Item Parcours 3 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="date">2023</div>
+                        <h3>Baccalauréat Général Technologique</h3>
+                        <h4>Lycée René Goscinny, Drap</h4>
+                        <p>Obtention du Baccalauréat STI2D. Spécialités Système d'Information et Numérique.</p>
+                        <span class="badge">Diplôme</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            <div class="projects-grid">
+                <!-- Projet 1 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <!-- Placeholder image purement CSS ou externe -->
+                        <div class="img-placeholder" style="background: linear-gradient(45deg, #14213d, #fca311);"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>ComptaFlow</h3>
+                        <p class="project-tech">Node.js • Express • SQLite</p>
+                        <p>Application complète de gestion pour auto-entrepreneur : livre de recettes, clients, devis et facturation.</p>
+                        <a href="project-tasks.html" class="btn-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Projet 2 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="img-placeholder" style="background: linear-gradient(45deg, #0a0908, #14213d);"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>LaugImmo</h3>
+                        <p class="project-tech">HTML • CSS • PHP</p>
+                        <p>Développement d'un site web d'une plateforme de mise en relation entre propriétaires et locataires pour des biens immobiliers.</p>
+                        <a href="project-laugimmo.html" class="btn-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Projet 3 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="img-placeholder" style="background: linear-gradient(45deg, #fca311, #e5e5e5);"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Foot Manage</h3>
+                        <p class="project-tech">Java • JavaFX • MySQL</p>
+                        <p>Application de gestion de foot pour les propriétaires de foot salle</p>
+                        <a href="project-foot-manage.html" class="btn-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Veille Technologique (Résumé) -->
+    <section id="veille" class="section" style="background-color: var(--bg-dark); padding-bottom: 80px;">
+        <div class="container">
+            <h2 class="section-title">Veille Technologique</h2>
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <p style="color: var(--gray); margin-bottom: 30px; font-size: 1.1rem;">
+                    Se tenir informé est essentiel dans le domaine de l'informatique. 
+                    Je consacre une partie de mon temps à suivre l'actualité sur deux sujets majeurs qui me passionnent.
+                </p>
+                <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 40px;">
+                    <!-- Badge Sujet 1 (Avec lien Feedly) -->
+                    <a href="https://feedly.com/i/collection/content/user/3eeab4ae-9cf8-4806-9a46-43bb20ad59d4/category/6490b1f9-5068-4aa3-8faa-bfc3e71da3b7" target="_blank" style="text-decoration: none;">
+                        <div style="background: rgba(252, 163, 17, 0.1); padding: 15px 25px; border-radius: 10px; border: 1px solid var(--accent); transition: transform 0.3s ease;">
+                            <i class="fas fa-microchip" style="color: var(--accent); margin-right: 10px;"></i>
+                            <span style="color: var(--white); font-weight: 600;">Hardware & Prix</span>
+                            <i class="fas fa-external-link-alt" style="color: var(--gray); margin-left: 10px; font-size: 0.8rem;"></i>
+                        </div>
+                    </a>
+                    <!-- Badge Sujet 2 (Avec lien Feedly) -->
+                    <a href="https://feedly.com/i/collection/content/user/3eeab4ae-9cf8-4806-9a46-43bb20ad59d4/category/a7a4f302-d233-4910-b86f-b7c763373440" target="_blank" style="text-decoration: none;">
+                        <div style="background: rgba(252, 163, 17, 0.1); padding: 15px 25px; border-radius: 10px; border: 1px solid var(--accent); transition: transform 0.3s ease;">
+                            <i class="fas fa-shield-alt" style="color: var(--accent); margin-right: 10px;"></i>
+                            <span style="color: var(--white); font-weight: 600;">Cybersécurité & IA</span>
+                            <i class="fas fa-external-link-alt" style="color: var(--gray); margin-left: 10px; font-size: 0.8rem;"></i>
+                        </div>
+                    </a>
+                </div>
+                
+                <a href="veille.html" class="btn btn-primary">
+                    Découvrir ma veille <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Me Contacter</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Parlons de votre projet</h3>
+                    <p>Je suis à la recherche d'un stage ou d'une alternance. N'hésitez pas à me contacter !</p>
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>killyan.laugier@gmail.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nice, France</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fab fa-linkedin"></i>
+                            <span>linkedin.com/in/killyan-laugier</span>
+                        </div>
+                    </div>
+                </div>
+<!-- Form supprimé -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2023 Laugier Killyan. Tous droits réservés.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
     </footer>
+
+    <!-- Script supprimé (Scroll Spy automatique retiré) -->
+
 </body>
 </html>

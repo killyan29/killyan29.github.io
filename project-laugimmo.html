@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaugImmo | Laugier Killyan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar (Consistent with index.html) -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Portfolio<span class="dot">.</span></a>
+            
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="index.html#projects" class="nav-item"><i class="fas fa-arrow-left"></i> Retour aux projets</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Detail Section -->
+    <section class="section project-detail-section">
+        <div class="container">
+            <div class="project-header">
+                <p class="subtitle">Laugimmo</p>
+                <h2 class="section-title">Location de maisons</h2>
+                <div class="project-intro">
+                    <p>
+                       L’application est un site web de location de maisons inspiré du modèle Airbnb.
+Elle permet aux utilisateurs de consulter des annonces de logements, de créer un compte pour publier leurs propres annonces et de réserver des maisons proposées par d’autres utilisateurs.
+
+Le site fonctionne comme une plateforme de mise en relation entre propriétaires et locataires.
+L’accès à la consultation des annonces est libre, mais certaines fonctionnalités nécessitent une authentification.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-details-grid">
+                <!-- Technologies -->
+                <div class="detail-card">
+                    <h3><i class="fas fa-code"></i> Technologies</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">PHP MVC</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                </div>
+
+                <!-- Fonctionnalités -->
+                <div class="detail-card">
+                    <h3><i class="fas fa-list-check"></i> Fonctionnalités</h3>
+                    <ul class="feature-list">
+                        <li>Affichage de toutes les annonces sans obligation de connexion</li>
+                        <li>Authentification utilisateur (inscription, connexion, déconnexion)</li>
+                        <li>Gestion des annonces (utilisateur connecté) : publication, modification, suppression d'annonces</li>
+                        <li>Navigation fluide et animations CSS soignées.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-actions">
+                <a href="https://github.com/killyan29/Laugimmo" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-github"></i> Voir le code sur GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2024 Laugier Killyan. Tous droits réservés.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

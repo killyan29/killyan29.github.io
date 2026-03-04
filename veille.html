@@ -3,47 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veille Technologique & Informatique</title>
+    <title>Veille Technologique | Laugier Killyan</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Intégration de Font Awesome pour les icônes (via CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Intégration de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Styles spécifiques pour la page veille */
+        .veille-detail-section {
+            padding-top: 120px;
+            min-height: 100vh;
+        }
+        
+        .veille-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        /* Correction du centrage du titre dans le header centré */
+        .veille-header .section-title {
+            left: auto;
+            transform: none;
+        }
+        
+        .veille-topic {
+            background-color: var(--bg-blue);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+            text-align: center; /* Centrer le texte dans les cartes */
+        }
+        
+        .veille-topic:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+        
+        .veille-topic h3 {
+            color: var(--accent);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centrer le titre flex */
+            gap: 15px;
+        }
+        
+        .veille-topic p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .veille-topic ul {
+            text-align: left;
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--gray);
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        
+        .feedly-btn-container {
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .back-nav {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Veille Technologique & Informatique</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="about.html">À propos</a></li>
-                <li><a href="projects.html">Projets</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h2>Les dangers de l'IA</h2>
-        <p>
-            L'intelligence artificielle progresse rapidement, mais elle soulève des inquiétudes.  
-            Parmi les risques majeurs : la désinformation, les biais algorithmiques et la perte de contrôle sur certaines technologies.
-        </p>
-        <p>
-            Des experts alertent sur l'usage abusif des IA génératives dans la création de **fake news**  
-            ou encore sur les dérives éthiques liées à la surveillance de masse.
-        </p>
-        <br> Lien de la veille : <a href="https://feedly.com/i/collection/content/user/3eeab4ae-9cf8-4806-9a46-43bb20ad59d4/category/55d0495e-14b5-44c1-8338-3e57003d8d6c">Veille dangers de l'IA</a> </a> </br>
 
-        <h2>Cybersécurité : Nouvelles techniques d'arnaque</h2>
-        <p>
-            Avec l'évolution des technologies, les cybercriminels innovent constamment.  
-            En 2025, les arnaques se diversifient, notamment avec l'essor du **deepfake**  
-            et des **attaques par ingénierie sociale ultra-ciblées**.
-        </p>
-        <p>
-            Les **fraudes par phishing vocal** et les **arnaques sur les plateformes de paiement en ligne**  
-            sont en forte hausse. Il est essentiel d’adopter des bonnes pratiques de sécurité pour se protéger.
-        </p>
-        <br> Lien de la veille : <a href="https://feedly.com/i/collection/content/user/3eeab4ae-9cf8-4806-9a46-43bb20ad59d4/category/4740adc8-3231-4f30-92c3-271ecf9dd632">Veille cybersecurite</a> </br>
-    </main>
+    <!-- Navigation simplifiée -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Portfolio<span class="dot">.</span></a>
+            
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item"><i class="fas fa-arrow-left"></i> Retour à l'accueil</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Section Détails Veille -->
+    <section class="section veille-detail-section">
+        <div class="container">
+            <div class="veille-header">
+                <p class="subtitle">Exploration & Actualités</p>
+                <h2 class="section-title">Ma Veille Technologique</h2>
+                <p style="color: var(--gray); max-width: 700px; margin: 0 auto;">
+                    Je m'informe régulièrement sur les évolutions du marché du hardware et les enjeux de la cybersécurité. Voici les deux sujets principaux que je suis actuellement.
+                </p>
+            </div>
+
+            <!-- Sujet 1 -->
+            <article class="veille-topic">
+                <h3><i class="fas fa-microchip"></i> Le prix croissant du matériel informatique</h3>
+                <p>
+                    Le marché du matériel informatique subit depuis quelques années des fluctuations importantes. Cette veille se concentre sur l'analyse des facteurs influençant ces hausses de prix, tels que :
+                </p>
+                <ul>
+                    <li>La pénurie de semi-conducteurs et les tensions géopolitiques.</li>
+                    <li>L'impact de l'inflation mondiale sur les coûts de production et de transport.</li>
+                    <li>L'évolution de la demande (IA, data centers, gaming) face à une offre parfois limitée.</li>
+                </ul>
+                <p>
+                    Je surveille les tendances des prix des GPU, CPU et de la mémoire RAM, ainsi que les stratégies des grands constructeurs (NVIDIA, AMD, Intel) pour s'adapter à ce nouveau contexte économique.
+                </p>
+                <div style="margin-top: 30px;">
+                    <a href="https://feedly.com/i/collection/content/user/3eeab4ae-9cf8-4806-9a46-43bb20ad59d4/category/6490b1f9-5068-4aa3-8faa-bfc3e71da3b7" target="_blank" class="btn btn-primary" style="font-size: 0.9rem; padding: 10px 20px;">
+                        <i class="fas fa-rss"></i> Suivre ce sujet sur Feedly
+                    </a>
+                </div>
+            </article>
+
+            <!-- Sujet 2 -->
+            <article class="veille-topic">
+                <h3><i class="fas fa-shield-alt"></i> Les nouvelles méthodes d'attaque grâce à l'IA</h3>
+                <p>
+                    L'intelligence artificielle révolutionne la cybersécurité, mais elle est aussi une arme redoutable entre les mains des cybercriminels. Ma veille porte sur :
+                </p>
+                <ul>
+                    <li>Les attaques par ingénierie sociale améliorées par les Deepfakes (audio et vidéo).</li>
+                    <li>L'utilisation de LLM (Large Language Models) pour générer du code malveillant ou des emails de phishing ultra-réalistes.</li>
+                    <li>Les attaques adverses visant à tromper les systèmes de reconnaissance d'image ou de détection d'intrusions.</li>
+                </ul>
+                <p>
+                    Il est crucial de comprendre ces menaces pour mieux développer les outils de défense de demain.
+                </p>
+                <div style="margin-top: 30px;">
+                    <a href="https://feedly.com/i/collection/content/user/3eeab4ae-9cf8-4806-9a46-43bb20ad59d4/category/a7a4f302-d233-4910-b86f-b7c763373440" target="_blank" class="btn btn-primary" style="font-size: 0.9rem; padding: 10px 20px;">
+                        <i class="fas fa-rss"></i> Suivre ce sujet sur Feedly
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Mon Portfolio</p>
+        <div class="container">
+            <p>&copy; 2024 Laugier Killyan. Tous droits réservés.</p>
+        </div>
     </footer>
+
 </body>
 </html>
